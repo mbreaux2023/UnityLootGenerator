@@ -14,7 +14,7 @@ The purpose of A Loot Generator is to provide entertainment to the user by creat
 4. Randomly selects a  projectile weapon if the user selects projectile weapon
 5. Randomly selects a melee weapon if the user selects melee weapon 
 6. Shows the randomly generated weapon in unity
-7. if more weapons need to be generated, go to step 1
+7. If more weapons need to be generated, go to step 1
 
 
 ### flowchart
@@ -22,10 +22,12 @@ The purpose of A Loot Generator is to provide entertainment to the user by creat
 
 ### Methods
 
-To help manage the complexity of the program, I have written two helper methods:
+To help manage the complexity of the program, I have written three helper methods:
 
-- setWeapon
+- setWeapon(Sprite, newSprite);
 - SetRandomWeapon
+
+
 - int GetValidInt(string prompt);
 - string GenerateRandomName(List<string> weapons, List<string> powers, List<string>, elements);
 
@@ -33,6 +35,10 @@ To help manage the complexity of the program, I have written two helper methods:
 
 Given a prompt to show the user, displays the prompt then reads input from the keyboard until the user enters a valid type. If the user enters an invalid type, this method displays an error message and prompts the user to try again.
 ![Connector Image](images/Display.jpg)
+
+
+1. Creating an integer variable called randomNumber and assigning it to a random range of passed in weapons
+2. let a random number be chosen when the user clocks 
 
 1. Validate the prompt is a string
 2. Display the prompt
@@ -54,3 +60,13 @@ Given a list of weapons, powers and elements, generate random loot using one ent
 5. Combine the weapon, power, and element together
     - weapons[firstIndex] + " " + power[midIndex] + " " + element[lastIndex];
 6. Return the loot
+
+
+### Tests
+
+1. First the user opens the program
+2. The user should press the start game button and the result should be the opening of another screen
+3. When the user has arrived to the main screen, the user can press either the projectile weapon button or the melee weapon button
+4. If the user clicks the projectile weapon button, the result should be a random projectile weapon sprite showing up.
+5. If the user clicks the melee weapon button, the result should be a random melee weapon sprite showing up.
+6. The program should print that the user found the resulting weapon.
