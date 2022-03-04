@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public SpriteRenderer WeaponRenderer;
     // Start is called before the first frame update
     void Start()
     {
