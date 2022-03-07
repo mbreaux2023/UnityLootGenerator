@@ -1,20 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     
     public SpriteRenderer WeaponRenderer;
+    public List <GameObject> AllWeapons;
 
-    public void SetWeapon(Sprite newSprite)
+    public void SetWeapon(GameObject newSprite)
     {
-        WeaponRenderer.sprite = newSprite;
+        if (newSprite == null )
+        {
+            throw new System.Exception("bro where the object at");
+        }
+
+        
+        foreach (GameObject weapon in AllWeapons)
+        {
+            weapon.SetActive(false);
+        }
+        System.Random generator = new System.Random();
+        int index = generator.Next(0, AllWeapons.Count);
+        AllWeapons[index].SetActive(true);
+        // newSprite.SetActive(true);
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+       AllWeapons = GameObject.FindGameObjectsWithTag("Weapon").ToList();
     }
 
     // Update is called once per frame
