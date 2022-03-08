@@ -170,6 +170,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponRenderer: {fileID: 1384814962}
+  AllWeapons:
+  - {fileID: 1384814960}
+  - {fileID: 1986242786}
 --- !u!1 &395411552
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +730,7 @@ GameObject:
   - component: {fileID: 1384814962}
   m_Layer: 0
   m_Name: sword
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1043,7 +1046,7 @@ GameObject:
   - component: {fileID: 1986242788}
   m_Layer: 0
   m_Name: Big Bad Bow (Gonna knock your house down)
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
