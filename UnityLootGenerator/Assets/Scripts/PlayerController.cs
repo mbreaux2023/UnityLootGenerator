@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     
     public SpriteRenderer WeaponRenderer;
-    public List <GameObject> AllWeapons;
+    public List <GameObject> AllWeapons = new List<GameObject>();
 
     public void SetWeapon(GameObject newSprite)
     {
@@ -29,7 +29,15 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       AllWeapons = GameObject.FindGameObjectsWithTag("Weapon").ToList();
+       foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Weapon"))
+       {
+           AllWeapons.Add(obj);
+       }
+
+        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Projectile"))
+        {
+            AllWeapons.Add(obj);
+        }
     }
 
     // Update is called once per frame
