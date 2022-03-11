@@ -7,8 +7,18 @@ public class PlayerController : MonoBehaviour
 {
     
     public SpriteRenderer WeaponRenderer;
+    public List <GameObject> RangeWeapons = new List<GameObject>();
     public List <GameObject> AllWeapons = new List<GameObject>();
 
+    public void OnClickButton(GameObject sprite)
+    {
+        SetWeapon(sprite);
+    }
+
+/// <summary>
+/// Given a game object, new sprite is passed in and turns off all weapon sprites. Then after that, a random weapon is generated from the AllWeapons list and that weapon is set active.
+/// </summary>
+/// <param name="newSprite"></param>
     public void SetWeapon(GameObject newSprite)
     {
         if (newSprite == null )
@@ -25,7 +35,16 @@ public class PlayerController : MonoBehaviour
         int index = generator.Next(0, AllWeapons.Count);
         AllWeapons[index].SetActive(true);
         // newSprite.SetActive(true);
+
+        foreach (GameObject weapon in RangeWeapons)
+        {
+            weapon.SetActive(false);
+        }
+
+        int index1 = generator.Next(0, RangeWeapons.Count);
+        RangeWeapons[index1].SetActive(true);
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Projectile"))
         {
-            AllWeapons.Add(obj);
+            RangeWeapons.Add(obj);
         }
     }
 
