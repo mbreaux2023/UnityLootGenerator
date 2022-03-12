@@ -15,10 +15,6 @@ public class PlayerController : MonoBehaviour
         SetWeapon(sprite);
     }
 
-/// <summary>
-/// Given a game object, new sprite is passed in and turns off all weapon sprites. Then after that, a random weapon is generated from the AllWeapons list and that weapon is set active.
-/// </summary>
-/// <param name="newSprite"></param>
     public void SetWeapon(GameObject newSprite)
     {
         if (newSprite == null )

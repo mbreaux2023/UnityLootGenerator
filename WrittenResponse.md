@@ -19,7 +19,6 @@ to let a person Generate a random type of weapon of their choice
 
 Describes what functionality of the program is demonstrated in the video.
 
-The video demonstrates that my program can generate a list of random loot
 
 The video demonstrates that my program can generate a random sprite depending on user input.
 
@@ -146,7 +145,7 @@ The second program code segment must show where your student-developed procedure
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program. 
 
 Given a game object, new sprite is passed in and turns off all weapon sprites. Then after that, a random weapon is generated from the AllWeapons list and that weapon is set active. 
-?
+
 ### 3c iv.
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
@@ -192,17 +191,19 @@ Condition(s) tested by the second call:
 
 I am testing if the prompt the use has inputted is not null. THis will skip the body of the if statement.
 
-**TODO: Complete this section**
+
 
 ### 3d iii.
 
 Result of the first call:
 
+The result of the first call is that sprites are null and that an exception is being thrown.
 
 
 **TODO: Complete this section**
 
 Result of the second call:
+The result of calling with a Dagger object is that a dagger sprite gets displayed
 
 
 
