@@ -144,7 +144,7 @@ The second program code segment must show where your student-developed procedure
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program. 
 
-Given a game object, new sprite is passed in and turns off all weapon sprites. Then after that, a random weapon is generated from the AllWeapons list and that weapon is set active. 
+Given a game object, new sprite is passed in and turns off all weapon sprites. Then after that, a random weapon is generated from the AllWeapons list and that weapon is set active. When the user clicks this button, the method gets called.
 
 ### 3c iv.
 

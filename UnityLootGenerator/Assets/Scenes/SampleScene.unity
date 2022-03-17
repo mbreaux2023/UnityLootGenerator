@@ -183,13 +183,13 @@ MonoBehaviour:
   - {fileID: 1579204814}
   - {fileID: 1172212711}
   - {fileID: 1616084840}
-  AllWeapons:
-  - {fileID: 1384814960}
+  MeleeWeapons:
   - {fileID: 274455259}
-  - {fileID: 225639529}
-  - {fileID: 1310974401}
-  - {fileID: 803533180}
   - {fileID: 211965169}
+  - {fileID: 1310974401}
+  - {fileID: 225639529}
+  - {fileID: 803533180}
+  - {fileID: 1384814960}
 --- !u!1 &211965169
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,14 +704,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 47680907}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: SetWeapon
-        m_Mode: 2
+        m_MethodName: OnClickButton
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 745056054}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: projectile
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &745056057
@@ -1659,14 +1659,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 47680907}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: SetWeapon
-        m_Mode: 2
+        m_MethodName: OnClickButton
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 1845816266}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: melee
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1845816269

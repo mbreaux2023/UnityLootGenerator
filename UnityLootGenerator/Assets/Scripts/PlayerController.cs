@@ -10,45 +10,47 @@ public class PlayerController : MonoBehaviour
     public List <GameObject> RangeWeapons = new List<GameObject>();
     public List <GameObject> MeleeWeapons = new List<GameObject>();
 
-    public void OnClickButton(GameObject sprite)
+    public void OnClickButton(string weaponType)
     {
         /// <summary>
         /// A method that is called when the user clicks a button and then prints a sprite on the users interface.
         /// </summary>
         /// <param name="newSprite"></param>
-        SetWeapon(sprite);
+        SetWeapon(weaponType);
     }
 
 
-    public void SetWeapon(GameObject newSprite)
+    public void SetWeapon(string weaponType)
     {
         /// <summary>
         /// This method checks if there is an image to be shown and if not, the system throws an exception. 
         /// Then all other weapons are turned off and are not displayed except the singular range or melee game object that gets called.
         /// </summary>
         /// <param name="newSprite"></param>
-        if (newSprite == null )
-        {
-            throw new System.Exception("bro where the object at");
-        }
-
-        
+        // if (newSprite == null )
+        // {
+        //     throw new System.Exception("bro where the object at");
+        // }
         foreach (GameObject weapon in MeleeWeapons)
-        {
-            weapon.SetActive(false);
-        }
-        System.Random generator = new System.Random();
-        int index = generator.Next(0, MeleeWeapons.Count);
-        MeleeWeapons[index].SetActive(true);
-        // newSprite.SetActive(true);
+            {
+                weapon.SetActive(false);
+            }
 
-        foreach (GameObject weapon in RangeWeapons)
+            foreach (GameObject weapon in RangeWeapons)
         {
             weapon.SetActive(false);
         }
 
+                    System.Random generator = new System.Random();
+
+        if (weaponType == "melee") {
+            
+            int index = generator.Next(0, MeleeWeapons.Count);
+            MeleeWeapons[index].SetActive(true);
+        } else {
         int index1 = generator.Next(0, RangeWeapons.Count);
         RangeWeapons[index1].SetActive(true);
+        }
     }
 
     // Start is called before the first frame update
