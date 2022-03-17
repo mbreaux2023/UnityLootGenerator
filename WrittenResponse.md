@@ -11,7 +11,7 @@ Provide a written response that does all three of the following:
 
 Describes the overall purpose of the program.
 
-to let a person Generate a random type of weapon of their choice
+The purpose of the program is to provide a fun game.
 
 **TODO: Complete this section**
 
@@ -150,13 +150,14 @@ Given a game object, new sprite is passed in and turns off all weapon sprites. T
 
 Explains in detailed steps how the algorithm implemented in the identified procedure works. Your explanation must be detailed enough for someone else to recreate it.
 
-1. Prompts the user to select projectile weapon or melee weapon
-2. Loads a list of possible projectile weapons 
-3. Loads a list of possible melee weapons 
-4. Randomly selects a  projectile weapon if the user selects projectile weapon
-5. Randomly selects a melee weapon if the user selects melee weapon 
-6. Shows the randomly generated weapon in unity
-7. If more weapons need to be generated, go to step 1
+1. Checks if a sprite is present and if not, an exception is thrown
+2. If a sprite is present, then for each weapon GameObject in MeleeWeapons, all other weapons get set to inactive.
+3. Create a random sprite generator.
+4. Generate a random melee weapon sprite.
+5. Generate a random range weapon sprite.
+6. Display it on the unity avatar.
+
+
 
 
 ## 3d
@@ -183,13 +184,13 @@ Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
 
-I am testing if the prompt the user has inputted is null. This will cause the body of the if statement to execute.
+This tests if the method doesn't allow a null input and throws and exception
  
 **TODO: Complete this section**
 
 Condition(s) tested by the second call:
 
-I am testing if the prompt the use has inputted is not null. THis will skip the body of the if statement.
+This tests that the method accepts a valid GameObject
 
 
 
@@ -203,7 +204,7 @@ The result of the first call is that sprites are null and that an exception is b
 **TODO: Complete this section**
 
 Result of the second call:
-The result of calling with a Dagger object is that a dagger sprite gets displayed
+The result of calling would randomly select a sprite
 
 
 
