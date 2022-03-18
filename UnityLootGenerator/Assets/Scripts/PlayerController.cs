@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+
     public SpriteRenderer WeaponRenderer;
     public List <GameObject> RangeWeapons = new List<GameObject>();
     public List <GameObject> MeleeWeapons = new List<GameObject>();
+    public List <GameObject> FillInArmor = new List<GameObject>();
+    public List <GameObject> DifferentArmor = new List<GameObject>();
+
 
     public void OnClickButton(string weaponType)
     {
@@ -17,6 +20,7 @@ public class PlayerController : MonoBehaviour
         /// </summary>
         /// <param name="newSprite"></param>
         SetWeapon(weaponType);
+        /// SetArmor(armorType);
     }
 
 
@@ -32,27 +36,52 @@ public class PlayerController : MonoBehaviour
         //     throw new System.Exception("bro where the object at");
         // }
         foreach (GameObject weapon in MeleeWeapons)
-            {
-                weapon.SetActive(false);
-            }
-
-            foreach (GameObject weapon in RangeWeapons)
         {
             weapon.SetActive(false);
         }
 
-                    System.Random generator = new System.Random();
+        foreach (GameObject weapon in RangeWeapons)
+        {
+            weapon.SetActive(false);
+        }
 
-        if (weaponType == "melee") {
-            
+        System.Random generator = new System.Random();
+
+        if (weaponType == "melee") 
+        {
             int index = generator.Next(0, MeleeWeapons.Count);
             MeleeWeapons[index].SetActive(true);
-        } else {
-        int index1 = generator.Next(0, RangeWeapons.Count);
-        RangeWeapons[index1].SetActive(true);
+        } 
+        else 
+        {
+            int index1 = generator.Next(0, RangeWeapons.Count);
+            RangeWeapons[index1].SetActive(true);
         }
     }
 
+    public void SetArmor(string armorType)
+    {
+        foreach(GameObject armor in FillInArmor)
+        {
+            armor.SetActive(false);
+        }
+        foreach (GameObject armor in DifferentArmor)
+        {
+            armor.SetActive(false);
+        }
+
+        System.Random generator1 =  new System.Random();
+        if (armorType == "cartoon")
+        {
+            int index2 = generator1.Next(0, FillInArmor.Count);
+            FillInArmor[index2].SetActive(true);
+        }
+        else 
+        {
+            int index3 =  generator1.Next(0, DifferentArmor.Count);
+            DifferentArmor[index3].SetActive(true);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
