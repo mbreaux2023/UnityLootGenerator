@@ -31,10 +31,11 @@ public class PlayerController : MonoBehaviour
         /// Then all other weapons are turned off and are not displayed except the singular range or melee game object that gets called.
         /// </summary>
         /// <param name="newSprite"></param>
-        // if (newSprite == null )
-        // {
-        //     throw new System.Exception("bro where the object at");
-        // }
+
+        if (weaponType == null )
+        {
+             throw new System.Exception("bro where the object at");
+        }
         foreach (GameObject weapon in MeleeWeapons)
         {
             weapon.SetActive(false);
