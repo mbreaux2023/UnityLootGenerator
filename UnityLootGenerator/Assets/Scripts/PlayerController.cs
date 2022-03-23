@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     public List <GameObject> DifferentArmor = new List<GameObject>();
 
 
+    public void OnClickButton1(string armorType)
+    {
+        SetArmor(armorType);
+    }
     public void OnClickButton(string weaponType)
     {
         /// <summary>
@@ -21,6 +25,7 @@ public class PlayerController : MonoBehaviour
         /// <param name="newSprite"></param>
         SetWeapon(weaponType);
         /// SetArmor(armorType);
+
     }
 
 
