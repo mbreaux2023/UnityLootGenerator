@@ -9,13 +9,13 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer WeaponRenderer;
     public List <GameObject> RangeWeapons = new List<GameObject>();
     public List <GameObject> MeleeWeapons = new List<GameObject>();
-    public List <GameObject> FillInArmor = new List<GameObject>();
-    public List <GameObject> DifferentArmor = new List<GameObject>();
+    public List <GameObject> FillInShoes = new List<GameObject>();
+    public List <GameObject> DifferentShoes = new List<GameObject>();
 
 
-    public void OnClickButton1(string armorType)
+    public void OnClickButton1(string shoeType)
     {
-        SetArmor(armorType);
+        SetArmor(shoeType);
     }
     public void OnClickButton(string weaponType)
     {
@@ -67,11 +67,11 @@ public class PlayerController : MonoBehaviour
 
     public void SetArmor(string armorType)
     {
-        foreach(GameObject armor in FillInArmor)
+        foreach(GameObject armor in FillInShoes)
         {
             armor.SetActive(false);
         }
-        foreach (GameObject armor in DifferentArmor)
+        foreach (GameObject armor in DifferentShoes)
         {
             armor.SetActive(false);
         }
@@ -79,13 +79,13 @@ public class PlayerController : MonoBehaviour
         System.Random generator1 =  new System.Random();
         if (armorType == "cartoon")
         {
-            int index2 = generator1.Next(0, FillInArmor.Count);
-            FillInArmor[index2].SetActive(true);
+            int index2 = generator1.Next(0, FillInShoes.Count);
+            FillInShoes[index2].SetActive(true);
         }
         else 
         {
-            int index3 =  generator1.Next(0, DifferentArmor.Count);
-            DifferentArmor[index3].SetActive(true);
+            int index3 =  generator1.Next(0, DifferentShoes.Count);
+            DifferentShoes[index3].SetActive(true);
         }
     }
     // Start is called before the first frame update
@@ -99,6 +99,11 @@ public class PlayerController : MonoBehaviour
         foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Projectile"))
         {
             RangeWeapons.Add(obj);
+        }
+
+        foreach(GameObject obj in GameObject.FindGameObjectsWithTag(""))
+        {
+            
         }
     }
 
