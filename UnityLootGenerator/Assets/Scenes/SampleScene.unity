@@ -192,7 +192,8 @@ MonoBehaviour:
   - {fileID: 225639529}
   - {fileID: 803533180}
   - {fileID: 1384814960}
-  FillInShoes: []
+  JordanShoes:
+  - {fileID: 1096197258}
   DifferentShoes: []
 --- !u!1 &211965169
 GameObject:

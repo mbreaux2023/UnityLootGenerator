@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public List <GameObject> RangeWeapons = new List<GameObject>();
     public List <GameObject> MeleeWeapons = new List<GameObject>();
     public List <GameObject> JordanShoes = new List<GameObject>();
-    public List <GameObject> DifferentShoes = new List<GameObject>();
+
 
 
    
@@ -73,21 +73,12 @@ public class PlayerController : MonoBehaviour
         {
             shoe.SetActive(false);
         }
-        foreach (GameObject shoe in DifferentShoes)
-        {
-            shoe.SetActive(false);
-        }
 
         System.Random generator1 =  new System.Random();
         if (shoeType == "RedShoes")
         {
             int index2 = generator1.Next(0, JordanShoes.Count);
             JordanShoes[index2].SetActive(true);
-        }
-        else 
-        {
-            int index3 =  generator1.Next(0, DifferentShoes.Count);
-            DifferentShoes[index3].SetActive(true);
         }
     }
     // Start is called before the first frame update
