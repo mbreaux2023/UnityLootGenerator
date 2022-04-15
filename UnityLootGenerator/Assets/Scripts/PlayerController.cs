@@ -9,14 +9,11 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer WeaponRenderer;
     public List <GameObject> RangeWeapons = new List<GameObject>();
     public List <GameObject> MeleeWeapons = new List<GameObject>();
-    public List <GameObject> FillInShoes = new List<GameObject>();
+    public List <GameObject> JordanShoes = new List<GameObject>();
     public List <GameObject> DifferentShoes = new List<GameObject>();
 
 
-    public void OnClickButton1(string shoeType)
-    {
-        SetArmor(shoeType);
-    }
+   
     public void OnClickButton(string weaponType)
     {
         /// <summary>
@@ -26,6 +23,11 @@ public class PlayerController : MonoBehaviour
         SetWeapon(weaponType);
         /// SetArmor(armorType);
 
+    }
+
+    public void OnClickButton1(string shoeType)
+    {
+        SetShoes(shoeType);
     }
 
 
@@ -65,22 +67,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void SetArmor(string armorType)
+    public void SetShoes(string shoeType)
     {
-        foreach(GameObject armor in FillInShoes)
+        foreach(GameObject shoe in JordanShoes)
         {
-            armor.SetActive(false);
+            shoe.SetActive(false);
         }
-        foreach (GameObject armor in DifferentShoes)
+        foreach (GameObject shoe in DifferentShoes)
         {
-            armor.SetActive(false);
+            shoe.SetActive(false);
         }
 
         System.Random generator1 =  new System.Random();
-        if (armorType == "cartoon")
+        if (shoeType == "RedShoes")
         {
-            int index2 = generator1.Next(0, FillInShoes.Count);
-            FillInShoes[index2].SetActive(true);
+            int index2 = generator1.Next(0, JordanShoes.Count);
+            JordanShoes[index2].SetActive(true);
         }
         else 
         {
@@ -101,9 +103,9 @@ public class PlayerController : MonoBehaviour
             RangeWeapons.Add(obj);
         }
 
-        foreach(GameObject obj in GameObject.FindGameObjectsWithTag(""))
+        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("jordans"))
         {
-            
+            JordanShoes.Add(obj);   
         }
     }
 
