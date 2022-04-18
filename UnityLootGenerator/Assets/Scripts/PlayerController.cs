@@ -69,13 +69,19 @@ public class PlayerController : MonoBehaviour
 
     public void SetShoes(string shoeType)
     {
+
+        if (shoeType == null )
+        {
+            throw new System.Exception("again where the shoes at.");
+        }
+
         foreach(GameObject shoe in JordanShoes)
         {
             shoe.SetActive(false);
         }
 
         System.Random generator1 =  new System.Random();
-        if (shoeType == "RedShoes")
+        if (shoeType == "jordans")
         {
             int index2 = generator1.Next(0, JordanShoes.Count);
             JordanShoes[index2].SetActive(true);
@@ -94,7 +100,7 @@ public class PlayerController : MonoBehaviour
             RangeWeapons.Add(obj);
         }
 
-        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("jordans"))
+        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Jordans"))
         {
             JordanShoes.Add(obj);   
         }

@@ -193,8 +193,7 @@ MonoBehaviour:
   - {fileID: 803533180}
   - {fileID: 1384814960}
   JordanShoes:
-  - {fileID: 1096197258}
-  DifferentShoes: []
+  - {fileID: 1821931507}
 --- !u!1 &211965169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1257,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RedShoes
+          m_StringArgument: JordanShoes
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1096197261
@@ -1888,7 +1887,7 @@ GameObject:
   - component: {fileID: 1821931508}
   m_Layer: 0
   m_Name: RedShoes
-  m_TagString: Untagged
+  m_TagString: Jordans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
