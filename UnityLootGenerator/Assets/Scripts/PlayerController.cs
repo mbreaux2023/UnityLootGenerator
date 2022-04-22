@@ -69,10 +69,16 @@ public class PlayerController : MonoBehaviour
 
     public void SetShoes(string shoeType)
     {
+        /// <summary>
+        /// This method checks if there is an image to be shown and if not, the system throws an exception. 
+        /// Then all other shoes are turned off and are not displayed except the singular pair of shoes game object that gets called.
+        /// </summary>
+        /// <param name="shoeType"></param>
+
 
         if (shoeType == null )
         {
-            throw new System.Exception("again where the shoes at.");
+            throw new System.Exception("again where ya shoes at.");
         }
 
         foreach(GameObject shoe in JordanShoes)
