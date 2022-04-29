@@ -148,7 +148,7 @@ public void OnClickButton1(string shoeType)
 
 Describes in general what the identified procedure does and how it contributes to the overall functionality of the program. 
 
-Given a game object, new sprite is passed in and turns off all shoe sprites. Then after that, a random shoe is generated from the JordanShoes list and that shoe is set active. When the user clicks this button, the method gets called.
+Given a game object, new sprite is passed in and turns off all shoe sprites. Then after that, a random shoe is generated from the JordanShoes list and that shoe is set active. When the user clicks this button, the method gets called. This Contributes to my functionality because it is used every time the user clicks the button.
 
 ### 3c iv.
 
@@ -187,13 +187,13 @@ Describes what condition(s) is being tested by each call to the procedure
 
 Condition(s) tested by the first call:
 
-This tests if the method doesn't allow a null input and throws and exception
+This tests that my method properly validates the input parameter and fails with an invalid input.
  
 **TODO: Complete this section**
 
 Condition(s) tested by the second call:
 
-This tests that the method accepts a valid GameObject
+This tests that the method executes properly given a valid input.
 
 
 
